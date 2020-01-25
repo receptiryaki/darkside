@@ -8,7 +8,7 @@
 
 Unfortunately Sketch doesn't have the color override feature. In order to use the plugin, we need to give the colors used in the design with layer styles.
 
-You can [download the sample design file](/examples/recipes.sketch) prepared with the method described below.
+You can [download the sample design file](https://github.com/receptiryaki/darkside/raw/master/examples/recipes.sketch) prepared with the method described below.
 
 ## Step 1: Create your color palette with layer styles
 
