@@ -1,0 +1,33 @@
+{
+  "$schema": "https://raw.githubusercontent.com/BohemianCoding/SketchAPI/develop/docs/sketch-plugin-manifest-schema.json",
+  "description": "Light and dark theme design plugin for Sketch",
+  "icon": "icon.png",
+  "appcast": "https://raw.githubusercontent.com/receptiryaki/darkside/master/.appcast.xml",
+  "commands": [
+    {
+      "name": "Export Themes",
+      "identifier": "darkside.exportThemes",
+      "script": "__export-themes_ts",
+      "shortcut": "ctrl shift e"
+    },
+    {
+      "name": "Switch Theme",
+      "identifier": "darkside.switchTheme",
+      "script": "__switch-theme_ts",
+      "shortcut": "ctrl shift s"
+    }
+  ],
+  "menu": {
+    "title": "Dark Side",
+    "items": [
+      "darkside.exportThemes",
+      "darkside.switchTheme"
+    ]
+  },
+  "version": "1.0.0",
+  "name": "Dark Side",
+  "identifier": "Dark Side",
+  "disableCocoaScriptPreprocessor": true,
+  "author": "receptiryaki",
+  "authorEmail": "recep.tiryaki@gmail.com"
+}

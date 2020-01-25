@@ -1,0 +1,594 @@
+var globalThis = this;
+var global = this;
+function __skpm_run (key, context) {
+  globalThis.context = context;
+  try {
+
+var exports =
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/export-themes.ts");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./src/export-themes.ts":
+/*!******************************!*\
+  !*** ./src/export-themes.ts ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _exportThemes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./exportThemes */ "./src/exportThemes/index.ts");
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+    Object(_exportThemes__WEBPACK_IMPORTED_MODULE_0__["default"])();
+});
+
+
+/***/ }),
+
+/***/ "./src/exportThemes/android/index.ts":
+/*!*******************************************!*\
+  !*** ./src/exportThemes/android/index.ts ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _utils_writeToFile__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../utils/writeToFile */ "./src/utils/writeToFile.ts");
+/* harmony import */ var _template__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./template */ "./src/exportThemes/android/template.ts");
+
+
+var android = function (exportPath, themes) {
+    var lightXml = Object(_template__WEBPACK_IMPORTED_MODULE_1__["default"])(themes.light);
+    var darkXml = Object(_template__WEBPACK_IMPORTED_MODULE_1__["default"])(themes.dark);
+    Object(_utils_writeToFile__WEBPACK_IMPORTED_MODULE_0__["default"])(lightXml, exportPath + "/values/", "colors.xml");
+    Object(_utils_writeToFile__WEBPACK_IMPORTED_MODULE_0__["default"])(darkXml, exportPath + "/values-night/", "colors.xml");
+};
+/* harmony default export */ __webpack_exports__["default"] = (android);
+
+
+/***/ }),
+
+/***/ "./src/exportThemes/android/template.ts":
+/*!**********************************************!*\
+  !*** ./src/exportThemes/android/template.ts ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var template = function (colors) { return "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<resources>\n\t" + colors.map(function (c) { return "<color name=\"" + c.name + "\">" + c.value + "</color>"; }).join("\n\t") + "\n</resources>"; };
+/* harmony default export */ __webpack_exports__["default"] = (template);
+
+
+/***/ }),
+
+/***/ "./src/exportThemes/createThemeObject.ts":
+/*!***********************************************!*\
+  !*** ./src/exportThemes/createThemeObject.ts ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _utils_color__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/color */ "./src/utils/color.ts");
+var __assign = (undefined && undefined.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+
+var createThemeObject = function (themedLayerStyles) {
+    var byColor = [];
+    var byTheme = {
+        light: [],
+        dark: []
+    };
+    var errors = [];
+    themedLayerStyles.forEach(function (sharedStyle) {
+        var _a, _b;
+        var splittedName = sharedStyle.name.split("/");
+        var colorName = splittedName[2].replace(/\s/g, "").replace("-", "");
+        var themeName = splittedName[1].toLowerCase();
+        if (colorName.charAt(0) !== "_") {
+            var color = sharedStyle.style.fills[0].color;
+            var rgba = Object(_utils_color__WEBPACK_IMPORTED_MODULE_0__["rgbaToFloatingPointRgbaString"])(Object(_utils_color__WEBPACK_IMPORTED_MODULE_0__["hexToRgba"])(color));
+            var androidHex = color.substring(0, 1) +
+                color.slice(-2) +
+                color.substring(1, color.length - 2);
+            var byColorIndex = byColor.findIndex(function (c) { return c.name === colorName; });
+            if (byColorIndex > -1) {
+                byColor[byColorIndex] = __assign(__assign({}, byColor[byColorIndex]), (_a = {}, _a[themeName] = rgba, _a));
+            }
+            else {
+                byColor.push((_b = { name: colorName }, _b[themeName] = rgba, _b));
+            }
+            byTheme[themeName].push({ name: colorName, value: androidHex });
+        }
+    });
+    byColor.forEach(function (c) {
+        if (!c.light)
+            errors.push("\"" + c.name + "\" has no light color.");
+        if (!c.dark)
+            errors.push("\"" + c.name + "\" has no dark color.");
+    });
+    if (errors.length) {
+        throw {
+            type: "alert",
+            title: "Missing colors",
+            message: errors.map(function (error) { return "\u00B7 " + error; }).join("\n")
+        };
+    }
+    return { byColor: byColor, byTheme: byTheme };
+};
+/* harmony default export */ __webpack_exports__["default"] = (createThemeObject);
+
+
+/***/ }),
+
+/***/ "./src/exportThemes/index.ts":
+/*!***********************************!*\
+  !*** ./src/exportThemes/index.ts ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _utils_getThemedLayerStyles__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/getThemedLayerStyles */ "./src/utils/getThemedLayerStyles.ts");
+/* harmony import */ var _createThemeObject__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./createThemeObject */ "./src/exportThemes/createThemeObject.ts");
+/* harmony import */ var _ios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ios */ "./src/exportThemes/ios/index.ts");
+/* harmony import */ var _utils_askPath__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils/askPath */ "./src/utils/askPath.ts");
+/* harmony import */ var _android__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./android */ "./src/exportThemes/android/index.ts");
+/* harmony import */ var _utils_handleError__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../utils/handleError */ "./src/utils/handleError.ts");
+
+
+
+
+
+
+var exportThemes = function () {
+    try {
+        var themedLayerStyles = Object(_utils_getThemedLayerStyles__WEBPACK_IMPORTED_MODULE_0__["default"])();
+        var themeObject = Object(_createThemeObject__WEBPACK_IMPORTED_MODULE_1__["default"])(themedLayerStyles);
+        var exportPath = Object(_utils_askPath__WEBPACK_IMPORTED_MODULE_3__["default"])();
+        Object(_ios__WEBPACK_IMPORTED_MODULE_2__["default"])(exportPath + "/Themes/iOS/", themeObject.byColor);
+        Object(_android__WEBPACK_IMPORTED_MODULE_4__["default"])(exportPath + "/Themes/Android/", themeObject.byTheme);
+    }
+    catch (error) {
+        Object(_utils_handleError__WEBPACK_IMPORTED_MODULE_5__["default"])(error);
+    }
+};
+/* harmony default export */ __webpack_exports__["default"] = (exportThemes);
+
+
+/***/ }),
+
+/***/ "./src/exportThemes/ios/contentsJson.ts":
+/*!**********************************************!*\
+  !*** ./src/exportThemes/ios/contentsJson.ts ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+    info: {
+        version: 1,
+        author: "Sketch Themes Plugin"
+    }
+});
+
+
+/***/ }),
+
+/***/ "./src/exportThemes/ios/index.ts":
+/*!***************************************!*\
+  !*** ./src/exportThemes/ios/index.ts ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _utils_writeToFile__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../utils/writeToFile */ "./src/utils/writeToFile.ts");
+/* harmony import */ var _contentsJson__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./contentsJson */ "./src/exportThemes/ios/contentsJson.ts");
+/* harmony import */ var _template__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./template */ "./src/exportThemes/ios/template.ts");
+
+
+
+var ios = function (exportPath, colors) {
+    Object(_utils_writeToFile__WEBPACK_IMPORTED_MODULE_0__["default"])(JSON.stringify(_contentsJson__WEBPACK_IMPORTED_MODULE_1__["default"], null, "\t"), exportPath + "/ColorAssets.xcassets", "Contents.json");
+    colors.forEach(function (c) {
+        Object(_utils_writeToFile__WEBPACK_IMPORTED_MODULE_0__["default"])(JSON.stringify(Object(_template__WEBPACK_IMPORTED_MODULE_2__["default"])(c.light, c.dark), null, "\t"), exportPath + "/ColorAssets.xcassets/" + c.name + ".colorset", "Contents.json");
+    });
+};
+/* harmony default export */ __webpack_exports__["default"] = (ios);
+
+
+/***/ }),
+
+/***/ "./src/exportThemes/ios/template.ts":
+/*!******************************************!*\
+  !*** ./src/exportThemes/ios/template.ts ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var template = function (light, dark) { return ({
+    info: {
+        version: 1,
+        author: "Sketch Themes Plugin"
+    },
+    colors: [
+        {
+            idiom: "universal",
+            color: {
+                "color-space": "srgb",
+                components: {
+                    red: light.r,
+                    alpha: light.a,
+                    blue: light.b,
+                    green: light.g
+                }
+            }
+        },
+        {
+            idiom: "universal",
+            appearances: [
+                {
+                    appearance: "luminosity",
+                    value: "dark"
+                }
+            ],
+            color: {
+                "color-space": "srgb",
+                components: {
+                    red: dark.r,
+                    alpha: dark.a,
+                    blue: dark.b,
+                    green: dark.g
+                }
+            }
+        }
+    ]
+}); };
+/* harmony default export */ __webpack_exports__["default"] = (template);
+
+
+/***/ }),
+
+/***/ "./src/utils/askPath.ts":
+/*!******************************!*\
+  !*** ./src/utils/askPath.ts ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var askPath = function (currentPath) {
+    if (currentPath === void 0) { currentPath = null; }
+    var panel = NSOpenPanel.openPanel();
+    panel.setMessage("Choose a location...");
+    panel.setPrompt("Select");
+    panel.setCanChooseDirectories(true);
+    panel.setCanChooseFiles(false);
+    panel.setCanCreateDirectories(true);
+    panel.setAllowsMultipleSelection(false);
+    panel.setShowsHiddenFiles(false);
+    panel.setExtensionHidden(false);
+    if (currentPath != null && currentPath != undefined) {
+        var url = [NSURL, fileURLWithPath, currentPath];
+        panel.setDirectoryURL(url);
+    }
+    var buttonPressed = panel.runModal();
+    var newURL = panel.URL();
+    panel.close();
+    panel = null;
+    if (buttonPressed == NSFileHandlingPanelOKButton) {
+        return newURL.path() + '';
+    }
+    else {
+        throw '';
+    }
+};
+/* harmony default export */ __webpack_exports__["default"] = (askPath);
+
+
+/***/ }),
+
+/***/ "./src/utils/color.ts":
+/*!****************************!*\
+  !*** ./src/utils/color.ts ***!
+  \****************************/
+/*! exports provided: hexToRgba, rgbaToFloatingPointRgbaString */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hexToRgba", function() { return hexToRgba; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rgbaToFloatingPointRgbaString", function() { return rgbaToFloatingPointRgbaString; });
+var hexToRgba = function (hex) {
+    var hashlessHex = removeHash(hex);
+    var hexObject = parseHex(hashlessHex);
+    return hexObject;
+};
+var removeHash = function (hex) {
+    return hex.charAt(0) === "#" ? hex.slice(1) : hex;
+};
+var parseHex = function (nakedHex) {
+    var isShort = nakedHex.length === 3 || nakedHex.length === 4;
+    var twoDigitHexR = isShort
+        ? "" + nakedHex.slice(0, 1) + nakedHex.slice(0, 1)
+        : nakedHex.slice(0, 2);
+    var twoDigitHexG = isShort
+        ? "" + nakedHex.slice(1, 2) + nakedHex.slice(1, 2)
+        : nakedHex.slice(2, 4);
+    var twoDigitHexB = isShort
+        ? "" + nakedHex.slice(2, 3) + nakedHex.slice(2, 3)
+        : nakedHex.slice(4, 6);
+    var twoDigitHexA = (isShort
+        ? "" + nakedHex.slice(3, 4) + nakedHex.slice(3, 4)
+        : nakedHex.slice(6, 8)) || "ff";
+    return {
+        r: hexToDecimal(twoDigitHexR),
+        g: hexToDecimal(twoDigitHexG),
+        b: hexToDecimal(twoDigitHexB),
+        a: Number((hexToDecimal(twoDigitHexA) / 255).toFixed(2))
+    };
+};
+var hexToDecimal = function (hex) { return parseInt(hex, 16); };
+var makeFloatingPoint = function (n) { return ((1 / 255) * n).toFixed(3).toString(); };
+var rgbaToFloatingPointRgbaString = function (rgbaColor) { return ({
+    r: makeFloatingPoint(rgbaColor.r),
+    g: makeFloatingPoint(rgbaColor.g),
+    b: makeFloatingPoint(rgbaColor.b),
+    a: rgbaColor.a.toString()
+}); };
+
+
+
+/***/ }),
+
+/***/ "./src/utils/getThemedLayerStyles.ts":
+/*!*******************************************!*\
+  !*** ./src/utils/getThemedLayerStyles.ts ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var sketch__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! sketch */ "sketch");
+/* harmony import */ var sketch__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(sketch__WEBPACK_IMPORTED_MODULE_0__);
+
+var getThemedLayerStyles = function () {
+    var _a, _b, _c;
+    var sharedLayerStyles = (_a = sketch__WEBPACK_IMPORTED_MODULE_0___default.a.getSelectedDocument()) === null || _a === void 0 ? void 0 : _a.sharedLayerStyles;
+    var colorAssets = [];
+    (_b = sharedLayerStyles) === null || _b === void 0 ? void 0 : _b.forEach(function (layerStyle) {
+        var splittedName = layerStyle.name.split("/");
+        var first = splittedName[0];
+        var second = splittedName[1];
+        var third = splittedName[2];
+        if (first.toLowerCase() === "themes") {
+            if (third) {
+                var s = second;
+                if (/^(Dark|Light)$/.test(s)) {
+                    colorAssets.push(layerStyle);
+                }
+                else {
+                    throw {
+                        type: "alert",
+                        title: "Theme named \"" + second + "\" not accepted.",
+                        message: "Styles starting with the \"Theme\" should continue with \"Dark\" or \"Light\".\ne.g \"Theme/Dark/Primary\""
+                    };
+                }
+            }
+        }
+    });
+    if (!((_c = colorAssets) === null || _c === void 0 ? void 0 : _c.length)) {
+        throw {
+            type: "alert",
+            title: "Could not found layer styles",
+            message: 'Sketch could not find a layer style prepared for the themes.\n\nName your layer styles as:\n"Theme/<Light or Dark>/<Color Name>"'
+        };
+    }
+    return colorAssets;
+};
+/* harmony default export */ __webpack_exports__["default"] = (getThemedLayerStyles);
+
+
+/***/ }),
+
+/***/ "./src/utils/handleError.ts":
+/*!**********************************!*\
+  !*** ./src/utils/handleError.ts ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var sketch__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! sketch */ "sketch");
+/* harmony import */ var sketch__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(sketch__WEBPACK_IMPORTED_MODULE_0__);
+
+var handleError = function (err) {
+    switch (err.type) {
+        case "alert":
+            sketch__WEBPACK_IMPORTED_MODULE_0__["UI"].alert(err.title, err.message);
+            break;
+        case "message":
+            sketch__WEBPACK_IMPORTED_MODULE_0__["UI"].message(err.message);
+        default:
+            break;
+    }
+};
+/* harmony default export */ __webpack_exports__["default"] = (handleError);
+
+
+/***/ }),
+
+/***/ "./src/utils/writeToFile.ts":
+/*!**********************************!*\
+  !*** ./src/utils/writeToFile.ts ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var writeToFile = function (string, filePath, fileName) {
+    // preparing file path
+    var fileManager = NSFileManager.defaultManager();
+    var fullPath = filePath + "/" + fileName;
+    if (!fileManager.fileExistsAtPath(fullPath)) {
+        // folder not exist
+        if (!fileManager.createDirectoryAtPath_withIntermediateDirectories_attributes_error(filePath, true, nil, nil)) {
+            // TODO: handle create folder error.
+            throw null;
+        }
+    }
+    if (fileManager.fileExistsAtPath(fullPath)) {
+        // file exist
+        // TODO: overwrite files prompt
+        /*
+        if (!fileManager.removeItemAtPath_error(fullPath, error)) {
+          // TODO: handle create file error.
+          throw null;
+        } */
+    }
+    var objcStr = NSString.stringWithFormat("%@", string);
+    return objcStr.writeToFile_atomically_encoding_error(fullPath, true, NSUTF8StringEncoding, null);
+};
+/* harmony default export */ __webpack_exports__["default"] = (writeToFile);
+
+
+/***/ }),
+
+/***/ "sketch":
+/*!*************************!*\
+  !*** external "sketch" ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("sketch");
+
+/***/ })
+
+/******/ });
+    if (key === 'default' && typeof exports === 'function') {
+      exports(context);
+    } else if (typeof exports[key] !== 'function') {
+      throw new Error('Missing export named "' + key + '". Your command should contain something like `export function " + key +"() {}`.');
+    } else {
+      exports[key](context);
+    }
+  } catch (err) {
+    if (typeof process !== 'undefined' && process.listenerCount && process.listenerCount('uncaughtException')) {
+      process.emit("uncaughtException", err, "uncaughtException");
+    } else {
+      throw err
+    }
+  }
+}
+globalThis['onRun'] = __skpm_run.bind(this, 'default')
