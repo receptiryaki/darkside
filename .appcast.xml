@@ -6,7 +6,7 @@
     <description>Easily prepare your designs in light and dark theme</description>
     <language>en</language>
     <item>
-      <enclosure url="https://github.com/receptiryaki/darkside/releases/download/v1.0.0/darkside.sketchplugin.zip" sparkle:version="1.0.0"/>
+      <enclosure url="https://github.com/receptiryaki/darkside/releases/download/1.0.0/darkside.sketchplugin.zip" sparkle:version="1.0.0"/>
     </item>
   </channel>
 </rss>
