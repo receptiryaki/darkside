@@ -1,3 +1,14 @@
+<img src="https://user-images.githubusercontent.com/3495307/73133771-7ac37000-403e-11ea-97b3-3153ea95ae52.png" alt="icons" width="221"/>
+
+# Sketch Dark Side Plugin
+
+- Easily design light and dark themes in Sketch.
+- Switch between themes.
+- Export color assets for **Xcode** and **Android Studio**.
+
+![Example App](https://user-images.githubusercontent.com/3495307/73133572-b14bbb80-403b-11ea-9935-ac765a3340a6.gif)
+
+
 # Installation
 
 - [Download](../../releases/latest/download/darkside.sketchplugin.zip) the latest release of the plugin
