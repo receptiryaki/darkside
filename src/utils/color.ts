@@ -28,7 +28,7 @@ const parseHex = (nakedHex: string) => {
     r: hexToDecimal(twoDigitHexR),
     g: hexToDecimal(twoDigitHexG),
     b: hexToDecimal(twoDigitHexB),
-    a: Number((hexToDecimal(twoDigitHexA) / 255).toFixed(2))
+    a: (hexToDecimal(twoDigitHexA) / 255).toFixed(2),
   };
 };
 
@@ -40,12 +40,12 @@ const rgbaToFloatingPointRgbaString = (rgbaColor: {
   r: number;
   g: number;
   b: number;
-  a: number;
+  a: string;
 }) => ({
   r: makeFloatingPoint(rgbaColor.r),
   g: makeFloatingPoint(rgbaColor.g),
   b: makeFloatingPoint(rgbaColor.b),
-  a: rgbaColor.a.toString()
+  a: rgbaColor.a,
 });
 
 export { hexToRgba, rgbaToFloatingPointRgbaString };

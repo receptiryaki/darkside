@@ -432,7 +432,7 @@ var parseHex = function (nakedHex) {
         r: hexToDecimal(twoDigitHexR),
         g: hexToDecimal(twoDigitHexG),
         b: hexToDecimal(twoDigitHexB),
-        a: Number((hexToDecimal(twoDigitHexA) / 255).toFixed(2))
+        a: (hexToDecimal(twoDigitHexA) / 255).toFixed(2),
     };
 };
 var hexToDecimal = function (hex) { return parseInt(hex, 16); };
@@ -441,7 +441,7 @@ var rgbaToFloatingPointRgbaString = function (rgbaColor) { return ({
     r: makeFloatingPoint(rgbaColor.r),
     g: makeFloatingPoint(rgbaColor.g),
     b: makeFloatingPoint(rgbaColor.b),
-    a: rgbaColor.a.toString()
+    a: rgbaColor.a,
 }); };
 
 
