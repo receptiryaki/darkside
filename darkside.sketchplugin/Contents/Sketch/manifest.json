@@ -3,6 +3,12 @@
   "description": "Light and dark theme design plugin for Sketch",
   "icon": "icon.png",
   "appcast": "https://raw.githubusercontent.com/receptiryaki/darkside/master/.appcast.xml",
+  "version": "1.0.1",
+  "name": "Dark Side",
+  "identifier": "Dark Side",
+  "disableCocoaScriptPreprocessor": true,
+  "author": "receptiryaki",
+  "authorEmail": "recep.tiryaki@gmail.com",
   "commands": [
     {
       "name": "Export Themes",
@@ -23,11 +29,5 @@
       "darkside.exportThemes",
       "darkside.switchTheme"
     ]
-  },
-  "version": "1.0.0",
-  "name": "Dark Side",
-  "identifier": "Dark Side",
-  "disableCocoaScriptPreprocessor": true,
-  "author": "receptiryaki",
-  "authorEmail": "recep.tiryaki@gmail.com"
+  }
 }
