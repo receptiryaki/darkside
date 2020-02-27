@@ -20,7 +20,7 @@ const getThemedLayerStyles = () => {
           throw {
             type: "alert",
             title: `Theme named "${second}" not accepted.`,
-            message: `Styles starting with the "Theme" should continue with "Dark" or "Light".\ne.g "Theme/Dark/Primary"`
+            message: `Styles starting with the "Themes" should continue with "Dark" or "Light".\ne.g "Themes/Dark/Primary"`
           };
         }
       }
@@ -32,7 +32,7 @@ const getThemedLayerStyles = () => {
       type: "alert",
       title: "Could not found layer styles",
       message:
-        'Sketch could not find a layer style prepared for the themes.\n\nName your layer styles as:\n"Theme/<Light or Dark>/<Color Name>"'
+        'Sketch could not find a layer style prepared for the themes.\n\nName your layer styles as:\n"Themes/<Light or Dark>/<Color Name>"'
     };
   }
 
