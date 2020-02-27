@@ -11,5 +11,8 @@
     <item>
       <enclosure url="https://github.com/receptiryaki/darkside/releases/download/1.0.1/darkside.sketchplugin.zip" sparkle:version="1.0.1"/>
     </item>
+    <item>
+      <enclosure url="https://github.com/receptiryaki/darkside/releases/download/1.0.2/darkside.sketchplugin.zip" sparkle:version="1.0.2"/>
+    </item>
   </channel>
 </rss>
