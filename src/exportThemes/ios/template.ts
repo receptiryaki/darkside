@@ -3,7 +3,7 @@ import { FloatingRgbaString } from "../createThemeObject";
 const template = (light: FloatingRgbaString, dark: FloatingRgbaString) => ({
   info: {
     version: 1,
-    author: "Sketch Themes Plugin"
+    author: "Sketch Dark Side Plugin"
   },
   colors: [
     {
