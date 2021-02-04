@@ -1,3 +1,7 @@
+# ⛔️ DEPRECATED
+This project was written for theme solution in older versions of sketch. Color variables feature came up with sketch 69. With Sketch 69, color variables feature came along and this plugin can be improved with this feature. But in this process, I transferred all my projects to Figma, which I think is more useful in the design systems. So, I'm no longer develop or improvoment in this project.  
+
+
 <img src="https://user-images.githubusercontent.com/3495307/73133771-7ac37000-403e-11ea-97b3-3153ea95ae52.png" alt="icons" width="221"/>
 
 # Sketch Dark Side Plugin
